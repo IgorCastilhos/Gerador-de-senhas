@@ -49,13 +49,23 @@ const generatePassword = (
   hasUppercase,
   lenght
 ) => {
-  const newArray = [ // Verifica se têm, por exemplo, números. Se tiver, vou pegar todas as informações do Array de Numbers. Caso for falso, irá retornar um Array vazio.
+  const newArray = [
+    // Verifica se têm, por exemplo, números. Se tiver, vou pegar todas as informações do Array de Numbers. Caso for falso, irá retornar um Array vazio.
     ...(hasNumbers ? numbers : []),
     ...(hasSymbols ? symbols : []),
     ...(hasLowercase ? LowercaseCaracters : []),
     ...(hasUppercase ? UppercaseCaracters : []),
   ];
 
-  if(newArray.length === 0) return;
+  if (newArray.length === 0) return;
 
-  let password = ""
+  let password = "";
+
+  // Percorre o tamanho do input. Declara a const RandomIndex, utiliza o método .floor pra arredondar e .random pra pegar um número aleatório e multiplica pelo .length do array
+  for (let i = 0; i < lenght; i++) {
+    const randomIndex = Math.floor(Math.random() * newArray.length);
+    password += newArray[randomIndex];
+  }
+
+  passInput.value = password;
+};

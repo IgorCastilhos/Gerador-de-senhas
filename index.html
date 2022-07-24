@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gerador de senhas</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
@@ -13,32 +13,28 @@
 
       <div>
         <input id="inputLengthId" type="range" min="6" max="24" />
-        {<!-- label referenciando o input-->}
-        <label for="labelLengthId"></label>
+        <label for="inputLengthId"></label>
       </div>
-
       <div>
         <input id="chkLowerId" type="checkbox" />
         <label for="chkLowerId">Letras minúsculas</label>
       </div>
-
       <div>
         <input id="chkUpperId" type="checkbox" />
         <label for="chkUpperId">Letras maiúsculas</label>
       </div>
-
       <div>
         <input id="chkNumberId" type="checkbox" />
-        <label for="chkNumberId">Letras Números</label>
+        <label for="chkNumberId">Números</label>
       </div>
-
       <div>
-        <input id="chkSymbolId" type="checkbox" />
-        <label for="chkSymbolId">Símbolos</label>
+        <input id="chkSymbolsId" type="checkbox" />
+        <label for="chkSymbolsId">Símbolos</label>
       </div>
 
       <button id="btnGerar">Gerar</button>
     </main>
-    <script src="app.js"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>
